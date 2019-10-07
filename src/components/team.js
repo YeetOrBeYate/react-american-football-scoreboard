@@ -13,5 +13,4 @@ function Team(props){
         </div>
     )
 }
-
 export default Team;
