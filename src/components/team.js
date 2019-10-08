@@ -1,6 +1,6 @@
 import React from "react";
 
-function Team(props){
+ function Team(props){
     const teamName = props.name;
     const TeamLocal = props.isHome ? 'home' : 'away';
 
@@ -13,4 +13,4 @@ function Team(props){
         </div>
     )
 }
-export default Team;
+ export default Team;

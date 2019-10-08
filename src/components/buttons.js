@@ -1,15 +1,15 @@
 import React from 'react';
-import setSomething from "../../src/App.js";
 
-function Buttons(props){
+export function Buttons(props){
     const location = props.location ? 'home': 'away';
+    const addScore = props.clickHandle;
 
     return(
         <div className = {`${location}Buttons`}>
-            <button className = {`${location}Buttons_touchdown`} onClick = {()=>setSomething(`${location}`,7)}>yeet</button>
-            <button className = {`${location}Buttons_fieldGoal`} onClick = {()=>setSomething(`${location}`,3)}>yate</button>
+            <button className = {`${location}Buttons__touchdown`} onClick = {()=>addScore(`${location}`,7)}>{location} Touch Down</button>
+            <button className = {`${location}Buttons__fieldGoal`} onClick = {()=>addScore(`${location}`,3)}>{location} Field Goal</button>
         </div>
     );
 }
 
-export default Buttons;
+// export default Buttons;

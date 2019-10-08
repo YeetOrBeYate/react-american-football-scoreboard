@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import "./App.css";
 import Team from "../src/components/team.js";
-import Buttons from "../src/components/buttons.js";
+import {Buttons} from "../src/components/buttons.js";
 import BottomRow from "./BottomRow";
 
 
@@ -34,15 +34,16 @@ function App() {
         <BottomRow/>
       </section>
       <section className="buttons">
-        {/* <Buttons location = {true}/> */}
-        <div className="homeButtons">
+        <Buttons location = {true} clickHandle = {setSomething}/>
+        {/* <div className="homeButtons">
           <button onClick = {()=> setSomething("home",7)} className="homeButtons__touchdown">Home Touchdown</button>
           <button onClick = {()=> setSomething("home",3)} className="homeButtons__fieldGoal">Home Field Goal</button>
-        </div>
-        <div className="awayButtons">
+        </div> */}
+        <Buttons location = {false} clickHandle = {setSomething}/>
+        {/* <div className="awayButtons">
           <button onClick = {()=> setSomething("away",7)} className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick = {()=> setSomething("away",3)} className="awayButtons__fieldGoal">Away Field Goal</button>
-        </div>
+        </div> */}
         <div>
           <button onClick = {()=>{
             setHome(0);
